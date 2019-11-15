@@ -34,7 +34,8 @@ client.on("message", message => {
     message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {
    m.send(`${argresult}\n ${m}`);
   })
-   message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` :mailbox:  عدد المستلمين `); 
+   message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` :mailbox:  Count Of Recipients
+ `); 
    message.delete(); 
   };     
   });
@@ -47,7 +48,7 @@ message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
 });
 
 client.on('ready',  () => {
-    console.log('تم تشغيل :Broadcast  ');
+    console.log('V4lL BroadCastBot Is On ');
     console.log(`Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
     console.log(`Logged in as * [ " ${client.user.username} " ] Users! [ " ${client.users.size} " ]`);
     console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
@@ -57,8 +58,8 @@ client.on('ready',  () => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
 if (message.content.startsWith('$adminbc')){
-if(!message.author.id === '476185102922285066') return;
-message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
+if(!message.author.id === '403258082869772288') return;
+message.channel.sendMessage('Sending The Messege |:white_check_mark:')
 client.users.forEach(m =>{
 m.sendMessage(args)
 })
@@ -76,13 +77,13 @@ m.sendMessage(args)
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
-         .setDescription(`**Help|هيلب
+         .setDescription(`**Help
 
-       $obc | لأرسال برود كاست للكل
+       $obc | To Send it for all members
 
-       $bc  |  لأرسال برود كاست للأونلاين
+       $bc  | To Send it for All Members
 
-       $adminbc | برودكاست عادي
+       $adminbc | Simple BroadCast
 
        ** `)
    message.author.sendEmbed(embed)
@@ -90,7 +91,7 @@ m.sendMessage(args)
    }
    });
 
-const developers = ["472413769700474901","id"]
+const developers = ["403258082869772288","id"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
