@@ -23,7 +23,7 @@ client.on("message", message => {
 //bc online
 
 
-  var prefix = "$";
+  var prefix = "V";
 
   client.on("message", message => {
   
@@ -43,7 +43,7 @@ client.on("message", message => {
 client.on('message', message => {
     var  user = message.mentions.users.first() || message.author;
 if (message.content.startsWith("Vavatar")) {
-message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
+message.channel.send(`This avatar For V{user} link : V{user.avatarURL}`);
 }
 });
 
@@ -67,7 +67,7 @@ m.sendMessage(args)
 });
 
   client.on('message', msg => {
-    if(msg.content === '$help')
+    if(msg.content === 'Vhelp')
     msg.reply('Check Your DM :white_check_mark:')
   });
   
@@ -78,18 +78,21 @@ m.sendMessage(args)
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help
-                 **SendMsg**
-       Vobc | To Send it for all members
-       Vbc  | To Send it for All Members
-       Vadminbc | Simple BroadCast
-                 **Admin**
-       Vsets : **To set the bot Streaming way**        
-       Vsetg : **To put the bot Playing way**
-       Vsetw : **To put the bot Watching way**
-       Vset1 : **To Make the bot Listening**
-       Vsetname : **To Change bot NAME**
-       Vsetava : **To Change bot AVATAR**
-       My Developer is ! •𝑽𝑨𝑳𝑳❞
+                 !!**SendMsg**!!
+
+     >>  Vobc | To Send it for All members !!
+     >>  Vbc  | To Send it for All Members !!
+     >>  Vadminbc | Simple BroadCast !!
+            
+                 !!**Admin**!!
+
+     >>  Vsets : **To set the bot Streaming way**        
+     >>  Vsetg : **To put the bot Playing way**
+     >>  Vsetw : **To put the bot Watching way**
+     >>  Vset1 : **To Make the bot Listening**
+     >>  Vsetname : **To Change bot NAME**
+     >>  Vsetava : **To Change bot AVATAR**
+     >>  My Developer is ! •𝑽𝑨𝑳𝑳❞
          for more contact him .. [! •𝑽𝑨𝑳𝑳❞ ,#5703]
 
        ** `)
