@@ -7,7 +7,7 @@ var adminprefix = 'V'
 //bc
 
 client.on("message", message => {
-    if (message.content.startsWith("Vobc")) {
+    if (message.content.startsWith("Vo")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
@@ -49,9 +49,9 @@ message.channel.send(`This avatar For V{user} link : V{user.avatarURL}`);
 
 client.on('ready',  () => {
     console.log('V4lL BroadCastBot Is On ');
-    console.log(`Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
-    console.log(`Logged in as * [ " ${client.user.username} " ] Users! [ " ${client.users.size} " ]`);
-    console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
+    console.log(`Logged in as * [ " ${client.user.username} " ] servers! [ " V{client.guilds.size} " ]`);
+    console.log(`Logged in as * [ " ${client.user.username} " ] Users! [ " V{client.users.size} " ]`);
+    console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " V{client.channels.size} " ]`);
   });
 
   client.on('message', message => {
