@@ -75,7 +75,7 @@ m.sendMessage(args)
   client.on("message", message => {
     if (message.content === "Vhelp") {
      const embed = new Discord.RichEmbed() 
-         .setColor("#00FF00")
+         .setColor("#ffd100")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help
                  !!**SendMsg**!!
@@ -93,7 +93,8 @@ m.sendMessage(args)
      >>  Vsetname : **To Change bot NAME**
      >>  Vsetava : **To Change bot AVATAR**
      >>  My Developer is ! •𝑽𝑨𝑳𝑳❞
-         for more contact him .. [! •𝑽𝑨𝑳𝑳❞ ,#5703]
+        
+     For more contact him .. [! •𝑽𝑨𝑳𝑳❞ ,#5703]
 
        ** `)
    message.author.sendEmbed(embed)
@@ -134,10 +135,19 @@ if (message.content.startsWith(adminprefix + 'setava')) {
     message.channel.send(`Changing The Avatar To :**${argresult}** `);
 } else 
   if (message.content.startsWith(adminprefix + 'dev')) {
-  client.user.setActivity(argresult , {type:'LISTENING'});
       message.channel.send(`**✅ My Developer Is ! •𝑽𝑨𝑳𝑳❞ ,#5703 ${argresult}**`)
-}
+} else 
+  if (message.content.startsWith(adminprefix + 'dev')) {    
+  client.user.members(argresult);
+  message.channel.send(`Members Count Of the Server is :**${argresult}** `);    
+  
+}      
 });
 
+ client.on("message", message => {
+    if (message.content === ".") {
+    msg.reply(`Welcome To Vencia `)
+    }
+    });
 
 client.login(process.env.TOKEN);
