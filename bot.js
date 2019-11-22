@@ -138,7 +138,7 @@ if (message.content.startsWith(adminprefix + 'setava')) {
       message.channel.send(`**✅ My Developer Is ! •𝑽𝑨𝑳𝑳❞ ,#5703 ${argresult}**`)
 } else 
   if (message.content.startsWith(adminprefix + 'members')) {    
-  client.user.members(argresult);
+  client.users.Members(argresult);
   message.channel.send(`Members Count Of the Server is :**${argresult}** `);    
   
 }      
