@@ -22,39 +22,22 @@ client.on("message", message => {
 
 //bc online
   
-var prefix ="V"
+vvar prefix = "V";
 
-   if(message.content.startsWith(prefix + bc))
-   
-      if(message.member.hasPermission("Adminstartor")); return;
-      
-      let args = message.content.split(" ").slice(1);
-      
-      var argresult = args.join(' ');
-      
-      var userIcon = message.author.displayavatarURL;
+  client.on("message", message => {
 
-      var broadCastEmbed = new discord.RichEmbed()
-
-      .setDescription("**BOT INFO**")
-      .setcolor("#ff0000")
-      .setThumbmail(userIcon)
-      .setfield("**Sendby**" , bot.user.username);
-      .setfield("**Time**" , bot.user.createdAT);
-      .setfield("**Message**" , message.author)
-
-      message.guild.members.filter(m => m.presence.status !== 'all').forEach(m => {
-        
-        return message.channel.send("broadCastEmbed");
-  
-  }
-  
-  message.channel.send(`\`${message.guild.members.filter( m => m.presence.status !== 'all').size}\` << !Count Of Recipients :white_check_mark: `);
-  message.delete();
-
-  }
-
-});
+              if (message.content.startsWith(prefix + "bc")) {
+                           if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+    let args = message.content.split(" ").slice(1);
+    var argresult = args.join(' '); 
+    message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {
+   m.send(${argresult}\n ${m});
+  })
+   message.channel.send(\${message.guild.members.filter(m => m.presence.status !== 'online').size}`  << !Count Of Recipients :white_check_mark: 
+ `); 
+   message.delete(); 
+  };
+  });
 
 
 client.on('ready',  () => {
