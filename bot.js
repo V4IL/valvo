@@ -21,31 +21,41 @@ client.on("message", message => {
 
 
 //bc online
-
-
-  var prefix = "V";
-
-  client.on("message", message => {
   
-              if (message.content.startsWith(prefix + "bc")) {
-                           if (!message.member.hasPermission("ADMINISTRATOR"))  return;
-    let args = message.content.split(" ").slice(1);
-    var argresult = args.join(' '); 
-    message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {
-   m.send(`${argresult}\n ${m}`);
-  })
-   message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\`  << !Count Of Recipients :white_check_mark: 
- `); 
-   message.delete(); 
-  };     
-  });
+var prefix ="V"
 
-client.on('message', message => {
-    var  user = message.mentions.users.first() || message.author;
-if (message.content.startsWith("Vavatar")) {
-message.channel.send(`This avatar For V{user} link : V{user.avatarURL}`);
-}
+   if(message.content.startsWith(prefix + bc))
+   
+      if(message.member.hasPermission("Adminstartor")); return;
+      
+      let args = message.content.split(" ").slice(1);
+      
+      var argresult = args.join(' ');
+      
+      var userIcon = message.author.displayavatarURL;
+
+      var broadCastEmbed = new discord.RichEmbed()
+
+      .setDescription("**BOT INFO**")
+      .setcolor("#ff0000")
+      .setThumbmail(userIcon)
+      .setfield("**Sendby**" , bot.user.username);
+      .setfield("**Time**" , bot.user.createdAT);
+      .setfield("**Message**" , message.author)
+
+      message.guild.members.filter(m => m.presence.status !== 'all').forEach(m => {
+        
+        return message.channel.send("broadCastEmbed");
+  
+  }
+  
+  message.channel.send(`\`${message.guild.members.filter( m => m.presence.status !== 'all').size}\` << !Count Of Recipients :white_check_mark: `);
+  message.delete();
+
+  }
+
 });
+
 
 client.on('ready',  () => {
     console.log('V4lL BroadCastBot Is On ');
