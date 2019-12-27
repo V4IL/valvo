@@ -2749,13 +2749,6 @@ client.on("message", message => {
    }
    });
 
- client.on('message', message => {
-   if(!message.content === `${prefix}dev`) {
-     return; message.channel.send("My Developer Is ! •𝑽𝑨𝑳𝑳❞ , ")
-   }
- }
-});
-
 const sug = JSON.parse(fs.readFileSync('./sug.json' , 'utf8'));
  // سوي ملف sug.json
  // وحمل بكج fs npm i fs
